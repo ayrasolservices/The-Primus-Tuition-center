@@ -159,7 +159,7 @@ a{text-decoration:none;color:inherit}
   border-bottom:1px solid var(--border);
 }
 .vox-main-inner{
-  height:160px;             
+  height:92px;              /* screenshot jaisa */
   display:flex;
   align-items:center;
   justify-content:space-between;
@@ -262,36 +262,49 @@ a{text-decoration:none;color:inherit}
   cursor:pointer;
 }
 .vox-burger span{
-  display:block;width:35px;height:5px;background:#111827;
-  margin:8px auto;border-radius:2px;
+  display:block;width:18px;height:2px;background:#111827;
+  margin:5px auto;border-radius:2px;
 }
 
 .vox-cta-mobile{display:none}
 .vox-cta-desktop{display:inline-flex}
 
 @media (max-width: 900px){
-  .vox-burger{display:block}
+   .vox-burger{display:block}
   .vox-cta-desktop{display:none}
 
   .vox-nav{
-    position:absolute;
-    top:100%;
-    left:18px;
-    right:18px;
-    margin:12px 0 0 0;
+    position:fixed;                 /* 🔥 important */
+    top:110px;                      /* topbar + header ke neeche */
+    left:0;
+    right:0;
+    width:100%;
+    height:calc(100vh - 110px);     /* 🔥 full remaining height */
     background:#fff;
-    border:1px solid var(--border);
-    border-radius:14px;
-    padding:12px;
+    border-top:1px solid var(--border);
+    border-radius:0;                /* full width look */
+    padding:16px;
     display:none;
     flex-direction:column;
     align-items:stretch;
-    gap:10px;
+    gap:14px;
+    overflow-y:auto;                /* 🔥 SCROLL ENABLE */
+    -webkit-overflow-scrolling:touch;
     box-shadow:0 18px 40px rgba(0,0,0,.12);
+    z-index:9998;
   }
   .vox-nav.open{display:flex}
+  
+  .vox-link{
+    padding:14px 10px;              /* bigger tap area */
+    font-size:16px;
+  }
 
-  .vox-cta-mobile{display:flex;justify-content:center}
+  .vox-cta-mobile{
+    display:flex;
+    justify-content:center;
+    margin-top:10px;
+}
 
   /* mobile dropdown accordion */
   .vox-ddmenu{
@@ -300,11 +313,16 @@ a{text-decoration:none;color:inherit}
     border-radius:12px;
     box-shadow:none;
     margin-top:6px;
+    padding-left:10px;
   }
   .vox-dd.open .vox-ddmenu{display:block}
 
   /* top bar wrap on small screens */
-  .vox-topbar-inner{flex-wrap:wrap;height:auto;padding:10px 0}
+  .vox-topbar-inner{
+     flex-wrap:wrap;
+    height:auto;
+    padding:10px 0;
+}
   .vox-login{border-radius:14px}
 }
 
@@ -343,4 +361,25 @@ a{text-decoration:none;color:inherit}
   });
 
   nav?.addEventListener("click", (e) => e.stopPropagation());
+
+
+   const burger = document.getElementById("voxBurger");
+  const nav = document.getElementById("voxNav");
+
+  burger?.addEventListener("click", (e) => {
+    e.stopPropagation();
+    const open = nav.classList.toggle("open");
+    burger.setAttribute("aria-expanded", open ? "true" : "false");
+    document.body.style.overflow = open ? "hidden" : "";
+  });
+
+  document.querySelectorAll(".vox-ddbtn").forEach(btn => {
+    btn.addEventListener("click", (e) => {
+      if (window.innerWidth <= 900) {
+        e.preventDefault();
+        e.stopPropagation();
+        btn.closest(".vox-dd").classList.toggle("open");
+      }
+    });
+  });
 </script>
