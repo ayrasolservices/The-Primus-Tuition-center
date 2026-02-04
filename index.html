@@ -1,74 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>The Primus Tuition Centre | Coming Soon</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: Arial, sans-serif;
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Coming Soon</title>
+<style>
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: url('assets/images/main-bg.png') no-repeat center center/cover;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    overflow: hidden;
+  }
+  .text-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-size: 2em;
+  }
+  .text-container span {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s forwards;
+  }
+  .text-container span:nth-child(1) { animation-delay: 0s; }
+  .text-container span:nth-child(2) { animation-delay: 1s; }
+  .text-container span:nth-child(3) { animation-delay: 2s; }
+  .text-container span:nth-child(4) { animation-delay: 3s; }
+  @keyframes fadeInUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
     }
-
-    .coming-soon {
-      min-height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background: linear-gradient(135deg, #004B2B, #0b7a4b);
-      text-align: center;
-      padding: 20px;
-    }
-
-    .coming-soon-box {
-      background: #ffffff;
-      padding: 40px 30px;
-      border-radius: 12px;
-      max-width: 500px;
-      width: 100%;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.15);
-    }
-
-    .coming-soon-box h1 {
-      color: #004B2B;
-      margin-bottom: 10px;
-    }
-
-    .coming-soon-box .tagline {
-      font-size: 18px;
-      font-weight: bold;
-      margin-bottom: 15px;
-    }
-
-    .coming-soon-box .message {
-      font-size: 16px;
-      color: #333;
-      margin-bottom: 20px;
-      line-height: 1.5;
-    }
-
-    .coming-soon-box .thanks {
-      font-size: 14px;
-      color: #666;
-    }
-  </style>
+  }
+</style>
 </head>
-
 <body>
-
-  <section class="coming-soon">
-    <div class="coming-soon-box">
-      <h1>The Primus Tuition Centre</h1>
-      <p class="tagline">Website Under Construction</p>
-      <p class="message">
-        Hamari website par kaam jari hai.<br>
-        Bohat jald complete website live ho jayegi.
-      </p>
-      <p class="thanks">Thank you for your patience 🙏</p>
-    </div>
-  </section>
-
+  <div class="text-container">
+    <span>Welcome to My Website</span>
+    <span>We are in the developing stage</span>
+    <span>Come Back Soon</span>
+    <span>Learn and Explore</span>
+  </div>
 </body>
 </html>
