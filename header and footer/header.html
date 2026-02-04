@@ -1,0 +1,337 @@
+<header class="vox-header">
+  <!-- TOP BAR -->
+  <div class="vox-topbar">
+    <div class="vox-container vox-topbar-inner">
+      <div class="vox-top-left">
+        <a href="tel:02086773138" class="vox-toplink">
+          <span class="vox-ico">📞</span> 0208 6773138
+        </a>
+        <span class="vox-sep">|</span>
+        <a href="mailto:admissions@voxlytuition.co.uk" class="vox-toplink">
+          <span class="vox-ico">✉</span> admissions@voxlytuition.co.uk
+        </a>
+      </div>
+
+      <div class="vox-top-right">
+        <span class="vox-follow">Follow Us:</span>
+        <a class="vox-fb" href="#" aria-label="Facebook">f</a>
+      </div>
+
+      <a class="vox-login" href="#">
+        <span class="vox-user">👤</span> Login / Register
+      </a>
+    </div>
+  </div>
+
+  <!-- MAIN HEADER -->
+  <div class="vox-main">
+    <div class="vox-container vox-main-inner">
+
+      <!-- Logo -->
+      <a class="vox-brand" href="#">
+        <!-- Replace with your real logo -->
+        <img src="https://dummyimage.com/210x70/ffffff/000000&text=VOXLY+LOGO" alt="Voxly Tuition" />
+      </a>
+
+      <!-- Center Menu -->
+      <nav class="vox-nav" id="voxNav">
+        <a class="vox-link active" href="#home">Home</a>
+        <a class="vox-link" href="#how">How It Works</a>
+        <a class="vox-link" href="#about">About Us</a>
+
+        <div class="vox-dd">
+          <button class="vox-link vox-ddbtn" type="button" aria-expanded="false">
+            Our Programs <span class="vox-caret"></span>
+
+          </button>
+          <div class="vox-ddmenu" role="menu">
+            <a href="#program1" role="menuitem">Program 1</a>
+            <a href="#program2" role="menuitem">Program 2</a>
+            <a href="#program3" role="menuitem">Program 3</a>
+          </div>
+        </div>
+
+        <a class="vox-link" href="#contact">Contact</a>
+
+        <div class="vox-dd">
+          <button class="vox-link vox-ddbtn" type="button" aria-expanded="false">
+            Join Now <span class="vox-caret"></span>
+          </button>
+          <div class="vox-ddmenu" role="menu">
+            <a href="#join-student" role="menuitem">Student</a>
+            <a href="#join-parent" role="menuitem">Parent</a>
+            <a href="#join-tutor" role="menuitem">Tutor</a>
+          </div>
+        </div>
+
+        <!-- mobile CTA inside menu -->
+        <a class="vox-cta vox-cta-mobile" href="#discount">85% DISCOUNT <span>→</span></a>
+      </nav>
+
+      <!-- Right CTA -->
+      <a class="vox-cta vox-cta-desktop" href="#discount">85% DISCOUNT <span>→</span></a>
+
+      <!-- Mobile burger -->
+      <button class="vox-burger" id="voxBurger" aria-label="Open menu" aria-expanded="false" aria-controls="voxNav">
+        <span></span><span></span><span></span>
+      </button>
+
+    </div>
+  </div>
+</header>
+
+
+<style>
+:root{
+  --top-blue:#0a67a7;      /* top bar */
+  --top-dark:#0a1f35;      /* right dark block */
+  --text:#0b1320;
+  --muted:#6b7280;
+  --border:#e6eef7;
+  --cta:#0b52ff;
+  --white:#fff;
+}
+
+*{box-sizing:border-box}
+body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:var(--text)}
+a{text-decoration:none;color:inherit}
+
+.vox-container{max-width:1240px;margin:0 auto;padding:0 18px}
+
+/* ===== TOP BAR ===== */
+.vox-topbar{
+  background:var(--top-blue);
+  color:#fff;
+  font-size:14px;
+}
+.vox-topbar-inner{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:16px;
+  height:44px; /* same slim bar */
+}
+
+/* left info */
+.vox-top-left{display:flex;align-items:center;gap:12px;white-space:nowrap}
+.vox-toplink{opacity:.95}
+.vox-toplink:hover{opacity:1;text-decoration:underline}
+.vox-ico{margin-right:8px}
+.vox-sep{opacity:.65}
+
+/* follow */
+.vox-top-right{display:flex;align-items:center;gap:10px;margin-left:auto}
+.vox-follow{opacity:.95}
+.vox-fb{
+  width:22px;height:22px;border-radius:999px;
+  display:inline-flex;align-items:center;justify-content:center;
+  background:rgba(255,255,255,.18);
+  font-weight:800;
+}
+.vox-fb:hover{background:rgba(255,255,255,.28)}
+
+/* right dark login area like screenshot */
+.vox-login{
+  background:var(--top-dark);
+  height:44px;
+  display:flex;
+  align-items:center;
+  padding:20 70px;
+  border-top-left-radius:50px;
+
+  white-space:nowrap;
+}
+.vox-login:hover{text-decoration:underline}
+.vox-user{margin-right:8px}
+
+/* ===== MAIN HEADER ===== */
+.vox-main{
+  background:#fff;
+  border-bottom:1px solid var(--border);
+}
+.vox-main-inner{
+  height:92px;              /* screenshot jaisa */
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:16px;
+  position:relative;
+}
+
+/* logo */
+.vox-brand img{height:62px;width:auto;display:block}
+
+/* nav center */
+.vox-nav{
+  display:flex;
+  align-items:center;
+  gap:22px;
+  margin:0 auto;            /* center feel */
+}
+.vox-link{
+  font-weight:700;
+  font-size:15px;
+  color:#111827;
+  padding:10px 8px;
+}
+.vox-link.active{color:#0a67a7}
+.vox-link:hover{color:#0a67a7}
+
+/* CTA button right */
+.vox-cta{
+  background:var(--cta);
+  color:#fff;
+  padding:14px 22px;
+  border-radius:6px;
+  font-weight:900;
+  font-size:14px;
+  letter-spacing:.2px;
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  white-space:nowrap;
+}
+.vox-cta:hover{filter:brightness(1.05)}
+
+/* dropdown */
+.vox-dd{position:relative}
+.vox-ddbtn{
+  border:0;
+  background:transparent;
+  cursor:pointer;
+  display:inline-flex;
+  align-items:center;
+  gap:6px;
+}
+.vox-caret{ display:inline-block;
+  width:7px;
+  height:7px;
+  margin-left:6px;
+  margin-top:2px;
+  border-right:2px solid #111827;
+  border-bottom:2px solid #111827;
+  transform: rotate(45deg);
+  }
+
+.vox-ddmenu{
+  position:absolute;
+  top:100%;
+  margin-top:0;
+  left:0;
+  min-width:220px;
+  background:#fff;
+  border:1px solid var(--border);
+  border-radius:10px;
+  padding:8px;
+  box-shadow:0 18px 35px rgba(0,0,0,.12);
+  display:none;
+  z-index:9999;   
+}
+.vox-ddmenu a{
+   display:block;
+  padding:10px 12px;
+  border-radius:8px;
+  font-weight:700;
+  color:#111827;
+  cursor:pointer;            /* ✅ cursor hand */
+  pointer-events:auto; 
+}
+.vox-ddmenu a:hover{background:#f3f7ff;}
+
+/* Desktop hover open */
+@media (min-width: 901px){
+  .vox-dd:hover .vox-ddmenu{display:block}
+}
+
+/* ===== MOBILE ===== */
+.vox-burger{
+  display:none;
+  width:44px;height:44px;
+  border:1px solid var(--border);
+  background:#fff;
+  border-radius:10px;
+  cursor:pointer;
+}
+.vox-burger span{
+  display:block;width:18px;height:2px;background:#111827;
+  margin:5px auto;border-radius:2px;
+}
+
+.vox-cta-mobile{display:none}
+.vox-cta-desktop{display:inline-flex}
+
+@media (max-width: 900px){
+  .vox-burger{display:block}
+  .vox-cta-desktop{display:none}
+
+  .vox-nav{
+    position:absolute;
+    top:100%;
+    left:18px;
+    right:18px;
+    margin:12px 0 0 0;
+    background:#fff;
+    border:1px solid var(--border);
+    border-radius:14px;
+    padding:12px;
+    display:none;
+    flex-direction:column;
+    align-items:stretch;
+    gap:10px;
+    box-shadow:0 18px 40px rgba(0,0,0,.12);
+  }
+  .vox-nav.open{display:flex}
+
+  .vox-cta-mobile{display:flex;justify-content:center}
+
+  /* mobile dropdown accordion */
+  .vox-ddmenu{
+    position:static;
+    display:none;
+    border-radius:12px;
+    box-shadow:none;
+    margin-top:6px;
+  }
+  .vox-dd.open .vox-ddmenu{display:block}
+
+  /* top bar wrap on small screens */
+  .vox-topbar-inner{flex-wrap:wrap;height:auto;padding:10px 0}
+  .vox-login{border-radius:14px}
+}
+
+</style>
+
+
+<script>
+  const burger = document.getElementById("voxBurger");
+  const nav = document.getElementById("voxNav");
+
+  burger?.addEventListener("click", (e) => {
+    e.stopPropagation();
+    const open = nav.classList.toggle("open");
+    burger.setAttribute("aria-expanded", open ? "true" : "false");
+  });
+
+  // mobile dropdown toggle
+  document.querySelectorAll(".vox-ddbtn").forEach(btn => {
+    btn.addEventListener("click", (e) => {
+      if (window.innerWidth <= 900) {
+        e.preventDefault();
+        e.stopPropagation();
+        const parent = btn.closest(".vox-dd");
+        parent.classList.toggle("open");
+      }
+    });
+  });
+
+  // close on outside click (mobile)
+  document.addEventListener("click", () => {
+    if (window.innerWidth <= 900) {
+      nav.classList.remove("open");
+      burger?.setAttribute("aria-expanded", "false");
+      document.querySelectorAll(".vox-dd").forEach(dd => dd.classList.remove("open"));
+    }
+  });
+
+  nav?.addEventListener("click", (e) => e.stopPropagation());
+</script>
