@@ -1,1 +1,429 @@
+<!-- ====== FOOTER ====== -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
 
+<footer class="edu-footer">
+  <!-- Top contact strip -->
+  <div class="edu-footer__top">
+    <div class="edu-footer__wrap">
+      <div class="edu-info">
+        <div class="edu-info__icon">
+          <i class="fa-solid fa-phone"></i>
+        </div>
+        <div class="edu-info__text">
+          <div class="edu-info__label">Call us any time:</div>
+          <a class="edu-info__value" href="tel:+920000000000">+92 000 0000000</a>
+        </div>
+      </div>
+
+      <div class="edu-info">
+        <div class="edu-info__icon">
+          <i class="fa-regular fa-envelope"></i>
+        </div>
+        <div class="edu-info__text">
+          <div class="edu-info__label">Email us 24/7 hours:</div>
+          <a class="edu-info__value" href="mailto:info@yoursite.com">info@yoursite.com</a>
+        </div>
+      </div>
+
+      <div class="edu-info">
+        <div class="edu-info__icon">
+          <i class="fa-solid fa-location-dot"></i>
+        </div>
+        <div class="edu-info__text">
+          <div class="edu-info__label">Our Tuition location:</div>
+          <div class="edu-info__value">Your Street, Your City, Country</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main glass card -->
+  <div class="edu-footer__card">
+    <div class="edu-footer__wrap edu-footer__grid">
+
+      <!-- Brand/About -->
+      <div class="edu-col">
+        <div class="edu-brand">
+          <img class="edu-brand__logo"
+               src="https://dummyimage.com/210x70/ffffff/0b52ff&text=YOUR+LOGO"
+               alt="Your Tuition"/>
+        </div>
+
+        <p class="edu-desc">
+          We help students learn smarter with structured lessons, expert teachers, and a supportive environment.
+        </p>
+
+        <div class="edu-follow-title">FOLLOW US ON:</div>
+        <div class="edu-social-row">
+          <a class="edu-social" href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a class="edu-social" href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        </div>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="edu-col">
+        <h4 class="edu-title">Quick Links</h4>
+        <span class="edu-underline"></span>
+
+        <ul class="edu-links">
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Our Blog</a></li>
+        </ul>
+      </div>
+
+      <!-- Programs -->
+      <div class="edu-col">
+        <h4 class="edu-title">Programs</h4>
+        <span class="edu-underline"></span>
+
+        <ul class="edu-links">
+          <li><a href="#">English</a></li>
+          <li><a href="#">Maths</a></li>
+          <li><a href="#">Science</a></li>
+        </ul>
+      </div>
+
+      <!-- Schedule -->
+      <div class="edu-col">
+        <h4 class="edu-title">Schedule</h4>
+        <span class="edu-underline"></span>
+
+        <div class="edu-schedule">
+          <div><strong>Monday – Friday:</strong> 12:00PM – 8:00PM</div>
+          <div><strong>Saturday:</strong> 10:00AM – 6:00PM</div>
+          <div><strong>Sunday:</strong> 12:00PM – 6:00PM</div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Center social buttons -->
+    <div class="edu-footer__center">
+      <a class="edu-square" href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+      <a class="edu-square" href="#" aria-label="Twitter/X"><i class="fa-brands fa-twitter"></i></a>
+      <a class="edu-square" href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+    </div>
+
+    <!-- Bottom line -->
+    <div class="edu-footer__bottom">
+      <div class="edu-footer__line"></div>
+      <div class="edu-copy">
+        Copyright © 2026 <a href="#">Your Tuition</a> All Rights Reserved.
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+<style>
+/* ===== FOOTER THEME ===== */
+.edu-footer{
+  --navy:#07162c;
+  --navy2:#061126;
+  --glass: rgba(255,255,255,.08);
+  --glass2: rgba(255,255,255,.06);
+  --stroke: rgba(255,255,255,.10);
+  --text: rgba(255,255,255,.92);
+  --muted: rgba(255,255,255,.70);
+  --blue:#0b52ff;
+  --blue2:#1f7bff;
+
+  color: var(--text);
+  /* 🔥 MAIN BACKGROUND IMAGE */
+  background:
+    linear-gradient(180deg, rgba(7,22,44,.92), rgba(6,17,38,.96)),
+    url("images/footer-bg.jpg");   /* 👈 image path */
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  padding: 34px 0 26px;
+  position: relative;
+}
+
+.edu-footer__wrap{
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 18px;
+}
+
+/* ===== TOP STRIP ===== */
+.edu-footer__top{ padding-bottom: 18px; }
+
+.edu-footer__top .edu-footer__wrap{
+  display:grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 26px;
+  align-items:center;
+}
+
+.edu-info{
+  display:flex;
+  align-items:center;
+  gap:16px;
+  padding: 8px 0;
+  border-right: 1px solid rgba(255,255,255,.12);
+}
+.edu-info:last-child{ border-right: 0; }
+
+.edu-info__icon{
+  width:56px; height:56px;
+  border-radius: 18px;
+  display:grid; place-items:center;
+  background:
+    radial-gradient(circle at 30% 30%, rgba(31,123,255,.55), transparent 60%),
+    linear-gradient(180deg, rgba(255,255,255,.12), rgba(255,255,255,.05));
+  border:1px solid rgba(255,255,255,.14);
+  box-shadow: 0 12px 30px rgba(0,0,0,.35);
+  color: #fff;
+  font-size: 18px;
+}
+
+.edu-info__label{
+  font-size: 13px;
+  color: var(--muted);
+  margin-bottom: 4px;
+}
+.edu-info__value{
+  font-weight: 900;
+  letter-spacing: .2px;
+  color: var(--text);
+}
+a.edu-info__value:hover{ text-decoration: underline; }
+
+/* ===== GLASS CARD ===== */
+.edu-footer__card{
+  max-width: 1240px;
+  margin: 0 auto;
+  border-radius: 18px;
+  border: 1px solid var(--stroke);
+  background:
+    radial-gradient(900px 500px at 50% 0%, rgba(255,255,255,.10), transparent 55%),
+    linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.04));
+  box-shadow: 0 22px 60px rgba(0,0,0,.45);
+  overflow:hidden;
+}
+
+/* main grid inside card */
+.edu-footer__grid{
+  padding: 34px 28px 18px;
+  display:grid;
+  grid-template-columns: 1.35fr 1fr 1fr 1.25fr;
+  gap: 28px;
+  align-items:start;
+}
+
+.edu-brand__logo{
+  height: 62px;
+  width:auto;
+  display:block;
+  margin-bottom: 12px;
+}
+
+.edu-desc{
+  color: var(--muted);
+  line-height: 1.7;
+  max-width: 360px;
+  margin: 0 0 18px;
+}
+
+.edu-follow-title{
+  font-weight:900;
+  letter-spacing:.3px;
+  margin: 6px 0 10px;
+}
+
+.edu-social-row{ display:flex; gap:10px; }
+.edu-social{
+  width:38px; height:38px;
+  border-radius: 12px;
+  display:grid; place-items:center;
+  background: rgba(255,255,255,.08);
+  border:1px solid rgba(255,255,255,.12);
+  color:#fff;
+}
+.edu-social:hover{ background: rgba(31,123,255,.22); border-color: rgba(31,123,255,.35); }
+
+/* column titles */
+.edu-title{
+  margin: 6px 0 8px;
+  font-size: 22px;
+  font-weight: 900;
+}
+.edu-underline{
+  display:block;
+  width: 70px;
+  height: 3px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--blue), var(--blue2));
+  opacity: .95;
+  margin-bottom: 14px;
+}
+
+/* links */
+.edu-links{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.edu-links li{ margin: 12px 0; }
+.edu-links a{
+  color: var(--muted);
+  font-weight: 700;
+}
+.edu-links a:hover{ color:#fff; text-decoration: underline; }
+
+.edu-schedule{
+  color: var(--muted);
+  font-weight: 700;
+  line-height: 1.9;
+}
+.edu-schedule strong{ color:#fff; }
+
+/* center socials */
+.edu-footer__center{
+  padding: 10px 28px 18px;
+  display:flex;
+  justify-content:center;
+  gap: 10px;
+}
+.edu-square{
+  width:48px; height:44px;
+  border-radius: 8px;
+  display:grid; place-items:center;
+  background: rgba(255,255,255,.08);
+  border: 1px solid rgba(255,255,255,.12);
+  color:#fff;
+  font-size: 18px;
+}
+.edu-square:hover{ background: rgba(31,123,255,.22); border-color: rgba(31,123,255,.35); }
+
+/* bottom */
+.edu-footer__bottom{ padding: 0 28px 22px; }
+.edu-footer__line{
+  height:1px;
+  background: rgba(255,255,255,.10);
+  margin: 10px 0 14px;
+}
+.edu-copy{
+  color: rgba(255,255,255,.65);
+  font-weight: 700;
+}
+.edu-copy a{ color: rgba(255,255,255,.85); }
+.edu-copy a:hover{ text-decoration: underline; }
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 980px){
+  .edu-footer__top .edu-footer__wrap{
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+  .edu-info{ border-right:0; border-bottom:1px solid rgba(255,255,255,.10); padding: 14px 0; }
+  .edu-info:last-child{ border-bottom:0; }
+  .edu-footer__grid{
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 560px){
+  .edu-footer__grid{
+    grid-template-columns: 1fr;
+    padding: 26px 18px 12px;
+  }
+  .edu-footer__center{ padding: 8px 18px 16px; }
+  .edu-footer__bottom{ padding: 0 18px 18px; }
+}
+
+
+/* ===== MOBILE-FIRST FIXES / OVERRIDES ===== */
+.edu-footer *{min-width:0} /* prevent overflow issues */
+
+.edu-info__value,
+.edu-desc,
+.edu-links a,
+.edu-schedule{
+  word-break: break-word;
+  overflow-wrap: anywhere;
+}
+
+/* Top strip: make it flexible */
+.edu-footer__top .edu-footer__wrap{
+  display:grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 26px;
+}
+
+/* tablet */
+@media (max-width: 1024px){
+  .edu-footer__top .edu-footer__wrap{
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+  .edu-info{
+    border-right:0 !important;
+    border-bottom:1px solid rgba(255,255,255,.10);
+    padding: 14px 0;
+  }
+  .edu-info:last-child{border-bottom:0}
+}
+
+/* main grid tablet */
+@media (max-width: 980px){
+  .edu-footer__grid{
+    grid-template-columns: 1fr 1fr;
+    gap: 22px;
+    padding: 26px 22px 12px;
+  }
+  .edu-title{font-size:20px}
+}
+
+/* mobile */
+@media (max-width: 600px){
+  .edu-footer{
+    padding: 22px 0 18px;
+  }
+
+  .edu-footer__card{
+    border-radius: 14px;
+  }
+
+  .edu-footer__grid{
+    grid-template-columns: 1fr;   /* ✅ single column */
+    padding: 22px 16px 10px;
+    gap: 18px;
+  }
+
+  .edu-brand__logo{height:54px}
+  .edu-desc{max-width:100%}
+
+  /* icons row spacing */
+  .edu-social-row{gap:12px}
+  .edu-social{
+    width:42px;height:42px;border-radius:14px;
+    font-size:16px;
+  }
+
+  /* center social buttons */
+  .edu-footer__center{
+    padding: 8px 16px 14px;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  .edu-square{
+    width:52px;height:46px;border-radius:10px;
+  }
+
+  .edu-footer__bottom{padding:0 16px 16px}
+}
+
+/* very small phones */
+@media (max-width: 420px){
+  .edu-info{gap:12px}
+  .edu-info__icon{width:50px;height:50px;border-radius:16px}
+  .edu-title{font-size:19px}
+}
+
+
+</style>
